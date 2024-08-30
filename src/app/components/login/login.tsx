@@ -27,8 +27,8 @@ const Login = () => {
     <div>
       <Container size="xs" mt="xl">
         <Paper shadow="sm" radius="md" withBorder p="xl">
-          <Title mb="xl" ta="center">
-            Login here
+          <Title mb="xl" ta="center" order={2}>
+            Login
           </Title>
           <form onSubmit={form.onSubmit((values: any) => login(values))}>
             <TextInput

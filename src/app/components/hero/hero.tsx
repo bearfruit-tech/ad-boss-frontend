@@ -1,7 +1,11 @@
+'use client';
+
 import React from 'react';
 import { Container, Title, Text, Button, Stack, Box } from '@mantine/core';
+import { useRouter } from 'next/navigation';
 
 export default function Hero() {
+    const router = useRouter();
   return (
     <Box bg="gray.0" py={{ base: 'xl', sm: '2xl' }} style={{
         height: 'calc(100vh - 80px)',
@@ -33,6 +37,7 @@ export default function Hero() {
             size="lg"
             radius="md"
             mt="xl"
+            onClick={() => router.push('/onboarding')}
           >
             Get Started
           </Button>
