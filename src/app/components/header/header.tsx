@@ -19,11 +19,10 @@ const Header = () => {
             justifyContent: "space-between",
           }}
         >
-          <Image
+          <img
             src="/adboss-logo.png"
             alt="AdBOSS Media Group Logo"
-            width={200}
-            height={70}
+            width={180}
             className="mr-2"
           />
           <Group>

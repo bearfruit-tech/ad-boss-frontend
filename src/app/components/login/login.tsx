@@ -10,7 +10,7 @@ import {
 } from "@mantine/core";
 import { useForm } from "@mantine/form";
 
-const LoginComponent = () => {
+const Login = () => {
   const form = useForm({
     mode: "uncontrolled",
     initialValues: {
@@ -33,19 +33,22 @@ const LoginComponent = () => {
           </Title>
           <form onSubmit={form.onSubmit((values: any) => login(values))}>
             <TextInput
+              size="lg"
               mb="md"
               label="Email"
-              placeholder="one@gmail.com"
+              placeholder="email@domain.com"
               key={form.key("email")}
               {...form.getInputProps("email")}
             />
             <PasswordInput
+              size="lg"
               mb="md"
+              placeholder="Your password"
               label="Password"
               key={form.key("password")}
               {...form.getInputProps("password")}
             />
-            <Button size="compact-lg" fullWidth type="submit">
+            <Button size="lg" fullWidth type="submit">
               Login
             </Button>
           </form>
@@ -55,4 +58,4 @@ const LoginComponent = () => {
   );
 };
 
-export default LoginComponent;
+export default Login;

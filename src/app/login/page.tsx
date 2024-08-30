@@ -1,14 +1,13 @@
-import { Container } from "@mantine/core"
 import Header from "../components/header/header";
-import LoginComponent from "../components/login/login";
+import Login from "../components/login/login";
 
-const Login = () => {
+const LoginPage = () => {
     return (
         <div>
             <Header />
-            <LoginComponent />
+            <Login />
         </div>
     )
 }
 
-export default Login;
+export default LoginPage;
