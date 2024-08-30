@@ -1,12 +1,12 @@
-import React from 'react';
-import Hero from '../components/hero/Hero';
-import Header from '../components/header/Header';
+import Image from "next/image";
+import styles from "./page.module.css";
+import { Button } from "@mantine/core";
+import Header from "./components/header/header";
 
-const Page = () => {
-    return (<>
-        <Header />
-        <Hero />
-    </>);
-};
-
-export default Page;
+export default function Home() {
+  return (
+    <>
+      <Header />
+    </>
+  );
+}
