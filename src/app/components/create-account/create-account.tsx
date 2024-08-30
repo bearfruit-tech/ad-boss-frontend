@@ -10,7 +10,7 @@ import {
 } from "@mantine/core";
 import { useForm } from "@mantine/form";
 
-const Login = () => {
+const CreateAccount = () => {
   const form = useForm({
     mode: "uncontrolled",
     initialValues: {
@@ -20,17 +20,18 @@ const Login = () => {
   });
 
   const login = (values: any) => {
+    alert(values);
     console.log(values);
   };
 
   return (
     <div>
-      <Container size="xs" mt="xl">
+      <Container size="lg" mt="xl" w={400}>
         <Paper shadow="sm" radius="md" withBorder p="xl">
-          <Title mb="xl" ta="center">
-            Login here
-          </Title>
           <form onSubmit={form.onSubmit((values: any) => login(values))}>
+            <Title mb="xl" ta="center" order={3}>
+              Account details
+            </Title>
             <TextInput
               size="lg"
               mb="md"
@@ -47,9 +48,6 @@ const Login = () => {
               key={form.key("password")}
               {...form.getInputProps("password")}
             />
-            <Button size="lg" fullWidth type="submit">
-              Login
-            </Button>
           </form>
         </Paper>
       </Container>
@@ -57,4 +55,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default CreateAccount;
